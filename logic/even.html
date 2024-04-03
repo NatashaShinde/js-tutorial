@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			// Prompt the user for input
+			let n = parseInt(prompt("Enter a value for 'n':"))
+
+			// Check if the input is valid
+			if (!isNaN(n) && n > 0) {
+				for (let i = 1; i <= n; i++) {
+					if (i % 2 === 0) {
+						document.write(i + '')
+					}
+				}
+			} else {
+				console.log('Please enter a valid positive number.')
+			}
+		</script>
+	</body>
+</html>

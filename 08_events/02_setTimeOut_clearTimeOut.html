@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>chai aur code</h1>
+		<button id="stop">stop</button>
+	</body>
+	<script>
+		// syntax : setInterval((){}, 1000)
+		//setTimeout: give me time interval, i will execute once only.
+
+		// setTimeout(function () {
+		// 	// console.log('samco')
+		// }, 2000)
+
+		//setinterval: give me time interval, and i will execute continiously.
+		//In handler, dont call function, just give its reference
+
+		const sayHitesh = function () {
+			// console.log('hitesh')
+		}
+
+		setTimeout(sayHitesh, 2000)
+
+		//=======================================
+		//clearTimeout: used to stop setTimeout
+
+		const changeText = function () {
+			document.querySelector('h1').innerHTML = 'best js series'
+		}
+		const changeMe = setTimeout(changeText, 2000) //reference of funnction, as its handler
+		document.querySelector('#stop').addEventListener('click', function () {
+			clearTimeout(changeMe)
+			console.log('stopped')
+		})
+		//==========================================
+		// SetTimeout(function/function reference,milliseconds)
+		// ClearTimeout(variable which hold the reference of settimeout)
+		// SetInterval(function /functiom reference, milisecond) - repeat until we clear it.
+		// ClearInterval(reference of function)
+	</script>
+</html>

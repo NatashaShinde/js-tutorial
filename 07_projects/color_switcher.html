@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.buttons {
+				display: flex;
+			}
+			#grey {
+				width: 150px;
+				height: 150px;
+				background-color: grey;
+				margin: 1rem;
+				border: 1px solid black;
+			}
+			#red {
+				width: 150px;
+				height: 150px;
+				background-color: red;
+				margin: 1rem;
+				border: 1px solid black;
+			}
+			#blue {
+				width: 150px;
+				height: 150px;
+				background-color: blue;
+				margin: 1rem;
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="button">
+			<div id="grey"></div>
+			<div id="red"></div>
+			<div id="blue"></div>
+		</div>
+	</body>
+	<script>
+		const buttons = document.querySelectorAll('.button')
+		const body = document.querySelector('body')
+
+		buttons.forEach(function (button) {
+			console.log(button)
+			button.addEventListener('click', function (e) {
+				console.log(e)
+				console.log(e.target)
+				if (e.target.id === 'grey') {
+					body.style.backgroundColor = e.target.id
+				}
+				if (e.target.id === 'red') {
+					body.style.backgroundColor = e.target.id
+				}
+				if (e.target.id === 'blue') {
+					body.style.backgroundColor = e.target.id
+				}
+			})
+		})
+	</script>
+</html>

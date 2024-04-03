@@ -1,0 +1,17 @@
+{
+	"name": "npm10",
+	"version": "0.1.0",
+	"description": "Learning",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"natasha-create": "cd /Users/natasha.shinde/Documents/JS/10_npm/natasha && touch a b c d e f g h i j k l m n o p q r s t u v w x y z"
+	},
+	"author": "Natasha Shinde",
+	"license": "ISC",
+	"dependencies": {
+		"dash": "^3.25.22",
+		"express": "^4.19.2",
+		"json-server": "^1.0.0-alpha.23"
+	}
+}

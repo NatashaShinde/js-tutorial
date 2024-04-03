@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+
+		<title>DOM learning</title>
+		<style>
+			.bg-black {
+				background-color: #212121;
+				color: #fff;
+			}
+		</style>
+	</head>
+	<body class="bg-black">
+		<div>
+			<h1 id="title" class="heading">DOM learning on Chai aur code <span style="display: none">test text</span></h1>
+			<h2>Lorem ipsum dolor sit.</h2>
+			<h2>Lorem ipsum dolor sit.</h2>
+			<h2>Lorem ipsum dolor sit.</h2>
+			<p>Lorem ipsum dolor sit amet.</p>
+			<input type="password" name="" id="" />
+
+			<ul>
+				<li class="list-item">one</li>
+				<li class="list-item">two</li>
+				<li class="list-item">three</li>
+				<li class="list-item">four</li>
+			</ul>
+		</div>
+	</body>
+</html>
+
+document.getElementById('firstHeading')
+<!-- <h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">JavaScript</span></h1> -->
+
+document.getElementById('firstHeading').id
+<!-- //firstHeading ;  -->
+document.getElementById('firstHeading').className;
+<!-- 'firstHeading mw-first-heading' -->
+
+document.getElementById('firstHeading').getAttribute('id')
+<!-- 'title' -->
+
+document.getElementById('firstHeading').getAttribute('class')
+<!--'heading'  -->
+
+document.getElementById('firstHeading').setAttribute('class', 'test heading')
+<!--new class replace with old class -->
+
+const title = getElementById('title')
+<!--  -->
+title.style.backgroundColor = "red"
+<!--  -->
+title.textContent or title.innerHTML or title.innerText
+<!-- gives inner text message -->
+
+document.querySelector('h1')
+<!-- gives first h1 -->
+
+document.querySelector('#title')
+<!-- <h1 id="title" class="heading">DOM learning on Chai aur code <span style="display: none">test text</span></h1> -->
+
+document.querySelector('.heading')
+<!-- <h1 id="title" class="heading">DOM learning on Chai aur code <span style="display: none">test text</span></h1> -->
+
+document.querySelector('input[type='password']')
+<!-- <input type="password" name="" id="" /> -->
+
+document.querySelector('p:first-child')
+<!--  -->
+
+document.querySelector('ul')
+<!-- <ul>
+				<li class="list-item">one</li>
+				<li class="list-item">two</li>
+				<li class="list-item">three</li>
+				<li class="list-item">four</li>
+			</ul> -->
+
+const myul = document.querySelector('ul')
+<!--  -->
+myul = document.querySelector('li')
+<!-- gives first only <li class="list-item">one</li> -->
+
+const turnGreen = myul.style.backgroundColor = "green"
+<!--  -->
+
+document.querySelectorAll('li')
+<!-- gives all li in node list which is not an array, -->
+const tempLiList = document.queySelectorAll('li').map((val) => ())
+<!-- use always forEach loop -->
+tempLiList.forEach((item) => (item.style.backgroundColor = 'green'))
+<!--  -->
+
+<!-- in dom with node list [] we can use forEach loop -->
